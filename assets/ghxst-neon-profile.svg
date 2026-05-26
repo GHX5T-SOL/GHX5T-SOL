@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Ghxst neon profile header</title>
+  <desc id="desc">Abstract dark neon profile header with a ghost-like signal mark, data rings, and the heading Ghxst.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#02040a"/>
+      <stop offset=".46" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset=".52" stop-color="#f472b6"/>
+      <stop offset="1" stop-color="#e5e7eb"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#7dd3fc" stop-opacity=".28"/>
+      <stop offset=".48" stop-color="#f472b6" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#02040a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#7dd3fc" stroke-opacity=".10"/>
+    </pattern>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .head { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 94px; font-weight: 900; letter-spacing: 14px; }
+      .scan { animation: scan 4.6s linear infinite; }
+      .spin { animation: spin 18s linear infinite; transform-origin: 600px 205px; }
+      .spin2 { animation: spin 26s linear infinite reverse; transform-origin: 600px 205px; }
+      .pulse { animation: pulse 2.8s ease-in-out infinite; }
+      .dash { stroke-dasharray: 14 18; animation: dash 12s linear infinite; }
+      @keyframes scan { from { transform: translateY(-70px); opacity: .05; } 50% { opacity: .42; } to { transform: translateY(480px); opacity: .05; } }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @keyframes pulse { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
+      @keyframes dash { to { stroke-dashoffset: -320; } }
+    </style>
+  </defs>
+  <rect width="1200" height="430" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="430" fill="url(#grid)" opacity=".75"/>
+  <circle cx="600" cy="205" r="250" fill="url(#glow)"/>
+  <rect x="18" y="18" width="1164" height="394" rx="24" fill="none" stroke="url(#line)" stroke-width="2"/>
+
+  <g class="spin" fill="none" stroke="#7dd3fc" stroke-opacity=".56">
+    <circle cx="600" cy="205" r="146"/>
+    <circle cx="600" cy="205" r="104"/>
+    <path d="M454 205H746M600 59V351"/>
+  </g>
+  <g class="spin2" fill="none" stroke="#f472b6" stroke-opacity=".46">
+    <path class="dash" d="M393 205A207 207 0 0 1 807 205A207 207 0 0 1 393 205"/>
+    <path class="dash" d="M300 205C420 104 780 104 900 205C780 306 420 306 300 205Z"/>
+  </g>
+
+  <g filter="url(#soft)" class="pulse">
+    <path d="M600 102C532 102 488 154 488 218C488 288 540 332 600 332C660 332 712 288 712 218C712 154 668 102 600 102Z" fill="#05070d" stroke="#7dd3fc" stroke-width="5"/>
+    <path d="M530 204C548 184 576 184 592 205C572 222 550 222 530 204Z" fill="#7dd3fc"/>
+    <path d="M670 204C652 184 624 184 608 205C628 222 650 222 670 204Z" fill="#7dd3fc"/>
+    <path d="M568 264H632" stroke="#f472b6" stroke-width="7" stroke-linecap="round"/>
+    <path d="M550 148C580 126 620 126 650 148" stroke="#e5e7eb" stroke-opacity=".65" stroke-width="4" fill="none"/>
+  </g>
+
+  <g class="mono" fill="#7dd3fc" font-size="14" opacity=".76">
+    <text x="54" y="74">profile.telemetry</text>
+    <text x="990" y="74">github://GHX5T-SOL</text>
+    <text x="70" y="342">views / followers / commits / languages</text>
+    <text x="862" y="342">public signal board</text>
+  </g>
+
+  <text x="600" y="370" text-anchor="middle" fill="url(#line)" class="head">Ghxst</text>
+  <text x="600" y="400" text-anchor="middle" fill="#cbd5e1" font-size="16" class="mono">profile stats / activity graph / public signal</text>
+  <rect class="scan" x="0" y="0" width="1200" height="52" fill="#7dd3fc" opacity=".12"/>
+</svg>

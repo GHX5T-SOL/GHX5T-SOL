@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150" role="img" aria-labelledby="title desc">
+  <title id="title">Ghxst activity waveform</title>
+  <desc id="desc">Decorative neon activity waveform strip.</desc>
+  <defs>
+    <linearGradient id="wave" x1="0" x2="1">
+      <stop stop-color="#7dd3fc"/>
+      <stop offset=".5" stop-color="#f472b6"/>
+      <stop offset="1" stop-color="#e5e7eb"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .move { stroke-dasharray: 18 22; animation: move 8s linear infinite; }
+      @keyframes move { to { stroke-dashoffset: -320; } }
+    </style>
+  </defs>
+  <rect width="1200" height="150" rx="18" fill="#05070d"/>
+  <g opacity=".12" stroke="#7dd3fc"><path d="M0 50H1200M0 100H1200"/><path d="M100 0V150M200 0V150M300 0V150M400 0V150M500 0V150M600 0V150M700 0V150M800 0V150M900 0V150M1000 0V150M1100 0V150"/></g>
+  <path class="move" d="M20 82C90 22 145 126 220 70S350 36 422 80S560 126 640 62S760 32 836 78S990 122 1180 42" fill="none" stroke="url(#wave)" stroke-width="5" filter="url(#glow)"/>
+  <text x="36" y="34" fill="#7dd3fc" font-size="14" class="mono">activity.stream</text>
+  <text x="1056" y="126" fill="#cbd5e1" font-size="14" class="mono">Ghxst</text>
+</svg>
