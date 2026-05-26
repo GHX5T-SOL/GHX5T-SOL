@@ -1,0 +1,20 @@
+[images]
+remote_images = [
+  "https://raw\\.githubusercontent\\.com/GHX5T-SOL/GHX5T-SOL/.*",
+  "https://github\\.com/GHX5T-SOL/GHX5T-SOL/.*"
+]
+
+[[redirects]]
+from = "/img/*"
+to = "/.netlify/images?url=/assets/:splat"
+status = 200
+
+[[redirects]]
+from = "/img/hero/:key"
+to = "/.netlify/images?url=/assets/:key&w=1200&h=430&fit=cover&q=85"
+status = 200
+
+[[headers]]
+for = "/assets/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
